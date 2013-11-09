@@ -1144,3 +1144,623 @@
 2013-11-09T13:09:45.316Z - info: 	Controller 'C:\dev\repos\github\tendo.io\app\controllers\users.js' loaded successfully.
 2013-11-09T13:09:45.318Z - info: HTTP route bootstrapping complete.
 2013-11-09T13:09:45.326Z - info: Server started on port 3000.
+2013-11-09T15:22:48.204Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:22:48.216Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:22:48.217Z - info: Loading schema models:
+2013-11-09T15:22:48.220Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:22:48.229Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:22:48.235Z - info: Schema model loading complete.
+2013-11-09T15:23:37.543Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:23:37.553Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:23:37.553Z - info: Loading schema models:
+2013-11-09T15:23:37.558Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:23:37.567Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:23:37.572Z - info: Schema model loading complete.
+2013-11-09T15:35:00.337Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:35:00.347Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:35:00.348Z - info: Loading schema models:
+2013-11-09T15:35:00.349Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:35:00.357Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:35:00.363Z - info: Schema model loading complete.
+2013-11-09T15:35:00.926Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:35:00.967Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:35:00.968Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:35:00.969Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:35:00.976Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:35:00.978Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:35:00.978Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:35:00.979Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:35:00.980Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:35:00.981Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:35:00.981Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:35:00.982Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:35:00.991Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:35:00.992Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:35:00.993Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:35:00.994Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:35:00.995Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:35:00.995Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:35:00.997Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:35:00.998Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:35:00.998Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:35:01.004Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:35:01.005Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:35:01.005Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:35:01.006Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:35:01.007Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:35:01.008Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:35:01.008Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:35:01.009Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:35:01.010Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:35:01.011Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:35:01.013Z - info: Server started on port 3000.
+2013-11-09T15:36:09.181Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:36:09.194Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:36:09.194Z - info: Loading schema models:
+2013-11-09T15:36:09.197Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:36:09.206Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:36:09.211Z - info: Schema model loading complete.
+2013-11-09T15:36:09.776Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:36:09.815Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:36:09.816Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:36:09.819Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:36:09.827Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:36:09.828Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:36:09.829Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:36:09.831Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:36:09.833Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:36:09.834Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:36:09.836Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:36:09.838Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:36:09.848Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:36:09.849Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:36:09.851Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:36:09.853Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:36:09.854Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:36:09.859Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:36:09.862Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:36:09.863Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:36:09.864Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:36:09.872Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:36:09.873Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:36:09.875Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:36:09.877Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:36:09.879Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:36:09.881Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:36:09.882Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:36:09.884Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:36:09.885Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:36:09.887Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:36:09.891Z - info: Server started on port 3000.
+2013-11-09T15:37:29.288Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:37:29.299Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:37:29.300Z - info: Loading schema models:
+2013-11-09T15:37:29.305Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:37:29.313Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:37:29.319Z - info: Schema model loading complete.
+2013-11-09T15:37:29.852Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:37:29.889Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:37:29.890Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:37:29.893Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:37:29.899Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:37:29.900Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:37:29.905Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:37:29.907Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:37:29.909Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:37:29.910Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:37:29.912Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:37:29.914Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:37:29.923Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:37:29.924Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:37:29.926Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:37:29.927Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:37:29.929Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:37:29.931Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:37:29.933Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:37:29.939Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:37:29.941Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:37:29.946Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:37:29.947Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:37:29.949Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:37:29.950Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:37:29.956Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:37:29.958Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:37:29.960Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:37:29.961Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:37:29.963Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:37:29.965Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:37:29.967Z - info: Server started on port 3000.
+2013-11-09T15:38:34.521Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:38:34.532Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:38:34.532Z - info: Loading schema models:
+2013-11-09T15:38:34.535Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:38:34.544Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:38:34.549Z - info: Schema model loading complete.
+2013-11-09T15:38:35.092Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:38:35.136Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:38:35.137Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:38:35.140Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:38:35.149Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:38:35.149Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:38:35.152Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:38:35.154Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:38:35.155Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:38:35.157Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:38:35.159Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:38:35.160Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:38:35.172Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:38:35.172Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:38:35.174Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:38:35.176Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:38:35.181Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:38:35.183Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:38:35.184Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:38:35.186Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:38:35.187Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:38:35.194Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:38:35.195Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:38:35.198Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:38:35.200Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:38:35.202Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:38:35.203Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:38:35.205Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:38:35.206Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:38:35.208Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:38:35.210Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:38:35.215Z - info: Server started on port 3000.
+2013-11-09T15:39:46.293Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:39:46.303Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:39:46.304Z - info: Loading schema models:
+2013-11-09T15:39:46.307Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:39:46.315Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:39:46.322Z - info: Schema model loading complete.
+2013-11-09T15:39:46.889Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:39:46.931Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:39:46.932Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:39:46.937Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:39:46.944Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:39:46.945Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:39:46.946Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:39:46.947Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:39:46.948Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:39:46.949Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:39:46.949Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:39:46.950Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:39:46.960Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:39:46.960Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:39:46.961Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:39:46.963Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:39:46.964Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:39:46.964Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:39:46.966Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:39:46.967Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:39:46.968Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:39:46.974Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:39:46.975Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:39:46.976Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:39:46.977Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:39:46.978Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:39:46.978Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:39:46.979Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:39:46.980Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:39:46.981Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:39:46.981Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:39:46.983Z - info: Server started on port 3000.
+2013-11-09T15:39:55.514Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:39:55.526Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:39:55.526Z - info: Loading schema models:
+2013-11-09T15:39:55.527Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:39:55.535Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:39:55.541Z - info: Schema model loading complete.
+2013-11-09T15:39:56.067Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:39:56.103Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:39:56.104Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:39:56.105Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:39:56.112Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:39:56.113Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:39:56.114Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:39:56.115Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:39:56.116Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:39:56.116Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:39:56.117Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:39:56.118Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:39:56.126Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:39:56.127Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:39:56.128Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:39:56.129Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:39:56.129Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:39:56.130Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:39:56.132Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:39:56.133Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:39:56.133Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:39:56.139Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:39:56.139Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:39:56.140Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:39:56.141Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:39:56.142Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:39:56.143Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:39:56.143Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:39:56.144Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:39:56.145Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:39:56.146Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:39:56.147Z - info: Server started on port 3000.
+2013-11-09T15:42:23.714Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:42:23.725Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:42:23.725Z - info: Loading schema models:
+2013-11-09T15:42:23.727Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:42:23.736Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:42:23.741Z - info: Schema model loading complete.
+2013-11-09T15:42:24.289Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:42:24.333Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:42:24.333Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:42:24.336Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:42:24.343Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:42:24.344Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:42:24.345Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:42:24.347Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:42:24.354Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:42:24.356Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:42:24.357Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:42:24.359Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:42:24.369Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:42:24.369Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:42:24.372Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:42:24.374Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:42:24.376Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:42:24.378Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:42:24.380Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:42:24.385Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:42:24.387Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:42:24.392Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:42:24.394Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:42:24.395Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:42:24.396Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:42:24.402Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:42:24.404Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:42:24.406Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:42:24.407Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:42:24.410Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:42:24.412Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:42:24.413Z - info: Server started on port 3000.
+2013-11-09T15:42:52.759Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:42:52.771Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:42:52.771Z - info: Loading schema models:
+2013-11-09T15:42:52.774Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:42:52.783Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:42:52.789Z - info: Schema model loading complete.
+2013-11-09T15:42:53.369Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:42:53.412Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:42:53.413Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:42:53.416Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:42:53.422Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:42:53.423Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:42:53.425Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:42:53.427Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:42:53.429Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:42:53.430Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:42:53.432Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:42:53.434Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:42:53.442Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:42:53.442Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:42:53.444Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:42:53.446Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:42:53.448Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:42:53.450Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:42:53.455Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:42:53.457Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:42:53.458Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:42:53.465Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:42:53.465Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:42:53.467Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:42:53.472Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:42:53.474Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:42:53.476Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:42:53.478Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:42:53.479Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:42:53.480Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:42:53.482Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:42:53.484Z - info: Server started on port 3000.
+2013-11-09T15:43:57.328Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:43:57.338Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:43:57.339Z - info: Loading schema models:
+2013-11-09T15:43:57.341Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:43:57.349Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:43:57.354Z - info: Schema model loading complete.
+2013-11-09T15:43:57.883Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:43:57.921Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:43:57.922Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:43:57.924Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:43:57.931Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:43:57.932Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:43:57.935Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:43:57.937Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:43:57.939Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:43:57.940Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:43:57.942Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:43:57.944Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:43:57.952Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:43:57.953Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:43:57.955Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:43:57.957Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:43:57.958Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:43:57.960Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:43:57.965Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:43:57.967Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:43:57.969Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:43:57.975Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:43:57.976Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:43:57.977Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:43:57.983Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:43:57.984Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:43:57.987Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:43:57.988Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:43:57.990Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:43:57.992Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:43:57.994Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:43:57.999Z - info: Server started on port 3000.
+2013-11-09T15:46:36.751Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:46:36.766Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:46:36.766Z - info: Loading schema models:
+2013-11-09T15:46:36.769Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:46:36.779Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:46:36.784Z - info: Schema model loading complete.
+2013-11-09T15:46:37.339Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:46:37.375Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:46:37.376Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:46:37.378Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:46:37.384Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:46:37.385Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:46:37.386Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:46:37.387Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:46:37.388Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:46:37.389Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:46:37.389Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:46:37.390Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:46:37.399Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:46:37.399Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:46:37.401Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:46:37.402Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:46:37.403Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:46:37.403Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:46:37.405Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:46:37.406Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:46:37.407Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:46:37.412Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:46:37.412Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:46:37.414Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:46:37.414Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:46:37.415Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:46:37.416Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:46:37.417Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:46:37.418Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:46:37.419Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:46:37.420Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:46:37.422Z - info: Server started on port 3000.
+2013-11-09T15:48:20.992Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:48:21.002Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:48:21.002Z - info: Loading schema models:
+2013-11-09T15:48:21.006Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:48:21.014Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:48:21.020Z - info: Schema model loading complete.
+2013-11-09T15:48:21.563Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:48:21.607Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:48:21.608Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:48:21.610Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:48:21.618Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:48:21.619Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:48:21.624Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:48:21.626Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:48:21.628Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:48:21.629Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:48:21.631Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:48:21.633Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:48:21.645Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:48:21.645Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:48:21.647Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:48:21.649Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:48:21.651Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:48:21.655Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:48:21.656Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:48:21.658Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:48:21.660Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:48:21.666Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:48:21.667Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:48:21.670Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:48:21.672Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:48:21.674Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:48:21.676Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:48:21.677Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:48:21.679Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:48:21.681Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:48:21.682Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:48:21.684Z - info: Server started on port 3000.
+2013-11-09T15:50:25.205Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:50:25.222Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:50:25.223Z - info: Loading schema models:
+2013-11-09T15:50:25.226Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:50:25.233Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:50:25.239Z - info: Schema model loading complete.
+2013-11-09T15:50:25.908Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:50:25.950Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:50:25.951Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:50:25.954Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:50:25.962Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:50:25.963Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:50:25.965Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:50:25.966Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:50:25.968Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:50:25.970Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:50:25.972Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:50:25.977Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:50:25.987Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:50:25.988Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:50:25.993Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:50:25.995Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:50:25.997Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:50:25.999Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:50:26.000Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:50:26.002Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:50:26.004Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:50:26.010Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:50:26.011Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:50:26.013Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:50:26.014Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:50:26.016Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:50:26.018Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:50:26.020Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:50:26.022Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:50:26.026Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:50:26.028Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:50:26.032Z - info: Server started on port 3000.
+2013-11-09T15:50:27.002Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:50:27.013Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:50:27.014Z - info: Loading schema models:
+2013-11-09T15:50:27.015Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:50:27.024Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:50:27.030Z - info: Schema model loading complete.
+2013-11-09T15:50:27.615Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:50:27.667Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:50:27.668Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:50:27.671Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:50:27.679Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:50:27.680Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:50:27.681Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:50:27.683Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:50:27.684Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:50:27.686Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:50:27.688Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:50:27.693Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:50:27.705Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:50:27.705Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:50:27.709Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:50:27.711Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:50:27.712Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:50:27.714Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:50:27.716Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:50:27.717Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:50:27.719Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:50:27.726Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:50:27.726Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:50:27.729Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:50:27.731Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:50:27.733Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:50:27.734Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:50:27.736Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:50:27.738Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:50:27.743Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:50:27.745Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:50:27.747Z - info: Server started on port 3000.
+2013-11-09T15:51:05.146Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:51:05.155Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:51:05.156Z - info: Loading schema models:
+2013-11-09T15:51:05.158Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:51:05.167Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:51:05.172Z - info: Schema model loading complete.
+2013-11-09T15:51:05.728Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:51:05.768Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:51:05.769Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:51:05.771Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:51:05.779Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:51:05.779Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:51:05.782Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:51:05.784Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:51:05.785Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:51:05.787Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:51:05.789Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:51:05.791Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:51:05.800Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:51:05.801Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:51:05.803Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:51:05.805Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:51:05.807Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:51:05.809Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:51:05.810Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:51:05.816Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:51:05.818Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:51:05.823Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:51:05.824Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:51:05.825Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:51:05.827Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:51:05.832Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:51:05.834Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:51:05.836Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:51:05.838Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:51:05.839Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:51:05.842Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:51:05.843Z - info: Server started on port 3000.
+2013-11-09T15:51:09.978Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:51:09.989Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:51:09.989Z - info: Loading schema models:
+2013-11-09T15:51:09.991Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:51:10.000Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:51:10.004Z - info: Schema model loading complete.
+2013-11-09T15:51:10.545Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:51:10.584Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:51:10.586Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:51:10.588Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:51:10.594Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:51:10.595Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:51:10.600Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:51:10.602Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:51:10.604Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:51:10.606Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:51:10.608Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:51:10.610Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:51:10.618Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:51:10.619Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:51:10.621Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:51:10.623Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:51:10.625Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:51:10.627Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:51:10.628Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:51:10.634Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:51:10.636Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:51:10.641Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:51:10.641Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:51:10.643Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:51:10.645Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:51:10.650Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:51:10.652Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:51:10.654Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:51:10.656Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:51:10.658Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:51:10.659Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:51:10.661Z - info: Server started on port 3000.
+2013-11-09T15:53:25.493Z - info: Bootstrapping mongoose db connection.
+2013-11-09T15:53:25.504Z - info: Mongoose db connection bootstrapping complete.
+2013-11-09T15:53:25.504Z - info: Loading schema models:
+2013-11-09T15:53:25.507Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\article.js'.
+2013-11-09T15:53:25.516Z - info: 	Loading model 'C:\dev\repos\github\tendo\app\models\user.js'.
+2013-11-09T15:53:25.521Z - info: Schema model loading complete.
+2013-11-09T15:53:26.068Z - info: Peer.js server has started on port '3333'
+2013-11-09T15:53:26.104Z - info: Express configuration bootstrapping complete.
+2013-11-09T15:53:26.105Z - info: Bootstrapping server HTTP routes:
+2013-11-09T15:53:26.108Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\articles.js'.
+2013-11-09T15:53:26.114Z - info: 		Route 'GET /articles' registered successfully.
+2013-11-09T15:53:26.115Z - info: 		Route 'POST /articles' registered successfully.
+2013-11-09T15:53:26.117Z - info: 		Route 'GET /articles/:articleId' registered successfully.
+2013-11-09T15:53:26.122Z - info: 		Route 'PUT /articles/:articleId' registered successfully.
+2013-11-09T15:53:26.124Z - info: 		Route 'DELETE /articles/:articleId' registered successfully.
+2013-11-09T15:53:26.126Z - info: 		Parameter adapter for parameter 'articleId' registered successfully.
+2013-11-09T15:53:26.128Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\articles.js' loaded successfully.
+2013-11-09T15:53:26.130Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\game.js'.
+2013-11-09T15:53:26.138Z - info: 		Route 'POST /game/join' registered successfully.
+2013-11-09T15:53:26.140Z - info: 		Route 'GET /game/console' registered successfully.
+2013-11-09T15:53:26.145Z - info: 		Route 'GET /game/mirrors' registered successfully.
+2013-11-09T15:53:26.146Z - info: 		Route 'GET /game/controllers' registered successfully.
+2013-11-09T15:53:26.148Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\game.js' loaded successfully.
+2013-11-09T15:53:26.149Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\root.js'.
+2013-11-09T15:53:26.155Z - info: 		Route 'GET /' registered successfully.
+2013-11-09T15:53:26.157Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\root.js' loaded successfully.
+2013-11-09T15:53:26.159Z - info: 	Loading controller 'C:\dev\repos\github\tendo\app\controllers\users.js'.
+2013-11-09T15:53:26.164Z - info: 		Route 'GET /signin' registered successfully.
+2013-11-09T15:53:26.165Z - info: 		Route 'GET /signup' registered successfully.
+2013-11-09T15:53:26.172Z - info: 		Route 'GET /signout' registered successfully.
+2013-11-09T15:53:26.174Z - info: 		Route 'GET /users/me' registered successfully.
+2013-11-09T15:53:26.175Z - info: 		Route 'GET /users/:userId' registered successfully.
+2013-11-09T15:53:26.177Z - info: 		Route 'POST /users' registered successfully.
+2013-11-09T15:53:26.179Z - info: 		Route 'POST /users/session' registered successfully.
+2013-11-09T15:53:26.181Z - info: 		Parameter adapter for parameter 'userId' registered successfully.
+2013-11-09T15:53:26.183Z - info: 	Controller 'C:\dev\repos\github\tendo\app\controllers\users.js' loaded successfully.
+2013-11-09T15:53:26.189Z - info: HTTP route bootstrapping complete.
+2013-11-09T15:53:26.191Z - info: Server started on port 3000.

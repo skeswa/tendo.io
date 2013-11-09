@@ -15,7 +15,8 @@ window.app.config(['$routeProvider',
             templateUrl: 'views/articles/view.html'
         }).
         when('/', {
-            templateUrl: 'views/index.html'
+            templateUrl: 'views/console.html',
+            controller: "ConsoleController"
         }).
         otherwise({
             redirectTo: '/'

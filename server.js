@@ -53,7 +53,7 @@ logger.info("Loading schema models:");
 walk(path.join(__dirname, "/app/models"));
 logger.info("Schema model loading complete.");
 // DAT WEBRTC DOE
-peerConfig.boostrap(3333);
+peerConfig.bootstrap(3333);
 // Define the express app
 var app = express();
 // Stuff the express configuration

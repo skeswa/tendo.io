@@ -23,9 +23,25 @@ var newGameSession = function(userAgent) {
         id: key
     };
     return key;
-}
+};
 
 var joinSession = function(req, res) {
+    // Get the type
+    var gameClientType = req.param("clientType");
+    if (!gameClientType) {
+        res.send(400, "The 'clientType' parameter was null.");
+        return;
+    } else if (!(gameClientType === "console" || gameClientType === "mirror" || gameClientType === "controller")) {
+        res.send(400, "The 'clientType' parameter must be 'console', 'mirror' or 'controller'. Instead it was '" + gameClientType + "'.");
+        return;
+    }
+    // Check the peer id
+    var peerId = req.param("peerId");
+    if (!peerId) {
+        res.send(400, "The 'peerId' parameter was null.");
+        return;
+    }
+    // Read the session
     var gameSessionId = req.session.gameSessionId;
     if (!gameSessionId) {
         // Make a new one since this guy doesn't have one
@@ -33,42 +49,28 @@ var joinSession = function(req, res) {
     }
     // Get the session
     var session = sessionMap[gameSessionId];
-    if (session) {
+    if (!session) {
         res.send(500, "Could not join session; it was non-existent.");
         return;
     }
-    // Get the type
-    var gameClientType = req.param("clientType");
-    if (gameClientType) {
-        res.send(400, "The 'clientType' parameter was null.");
-        return;
-    } else if (!(gameClientType === "console" || gameClientType === "mirror" || gameClientType === "controller")) {
-        res.send(400, "The 'clientType' parameter must be 'console', 'mirror' or 'controller'. Instead it was '" + gameClientType + "'.");
-    }
-    // Check the peer id
-    var peerId = req.param("peerId");
-    if (peerId) {
-        res.send(400, "The 'peerId' parameter was null.");
-        return;
-    }
     // Do the register
-    if (gameClientType === "console") session["consolePeerId"] = peerId;
+    if (gameClientType === "console") session.consolePeerId = peerId;
     else if (gameClientType === "mirror") {
-        var mirrors = session["mirrorPeerIds"];
+        var mirrors = session.mirrorPeerIds;
         if (!mirrors) {
-            mirrors = session["mirrorPeerIds"] = [];
+            mirrors = session.mirrorPeerIds = [];
         }
         if (mirrors.indexOf(peerId) == -1) mirrors.push(peerId);
     } else {
         // Controller
-        var controllers = session["controllerPeerIds"];
+        var controllers = session.controllerPeerIds;
         if (!controllers) {
-            controllers = session["controllerPeerIds"] = [];
+            controllers = session.controllerPeerIds = [];
         }
         if (controllers.indexOf(peerId) == -1) controllers.push(peerId);
     }
     // Call mom - tell her we're ok
-    res.send(200);
+    res.json(200, session);
 };
 
 var getConsolePeerId = function(req, res) {
@@ -83,7 +85,7 @@ var getConsolePeerId = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
-    res.send(200, session["consolePeerId"]);
+    res.send(200, session.consolePeerId);
 };
 
 var getMirrorPeerIds = function(req, res) {
@@ -98,7 +100,7 @@ var getMirrorPeerIds = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
-    res.json(200, session["getMirrorPeerIds"] || []);
+    res.json(200, session.getMirrorPeerIds || []);
 };
 
 var getControllerPeerIds = function(req, res) {
@@ -113,7 +115,7 @@ var getControllerPeerIds = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
-    res.json(200, session["getControllerPeerIds"] || []);
+    res.json(200, session.getControllerPeerIds || []);
 };
 
 /******************************************* EXPORTS **********************************************/
