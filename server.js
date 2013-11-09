@@ -18,24 +18,13 @@ app.use(express.session({
 }));
 app.use(express.bodyParser());
 
-app.get('/generateqr', function(req, res){
-	var gameId = md5('gId' + (new Date()).getTime() + Math.floor((Math.random() * 100) + 1));
+app.get('/generateqr/:id', function(req, res){
+	var gameId = req.param('id'); 
 	var qr = qrcode(4, 'M');
     console.log('http://' + req.get('host') + '/game/' + gameId);
-	qr.addData(req.get('host') + '/game/' + gameId);
+	qr.addData('http://' + req.get('host') + '/game/' + gameId);
 	qr.make();
 	res.send(200, qr.createImgTag());
-});
-
-app.get('/game/:gameId', function(req, res){
-	var ua = req.header('user-agent');
-    if(/mobile/i.test(ua)) {
-		//render controls
-		res.render(path.join(__dirname, 'controller', 'index.html'));
-	} else {
-        //render game
-		res.render(path.join(__dirname, 'controller', 'index.html'));
-    }
 });
 
 http.createServer(app).listen(7373);
