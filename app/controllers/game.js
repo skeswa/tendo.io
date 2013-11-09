@@ -75,13 +75,13 @@ var joinSession = function(req, res) {
 
 var getConsolePeerId = function(req, res) {
     var gameSessionId = req.session.gameSessionId;
-    if (gameSessionId) {
+    if (!gameSessionId) {
         res.send(400, "The 'gameSessionId' parameter was null.");
         return;
     }
     // Get the session
     var session = sessionMap[gameSessionId];
-    if (session) {
+    if (!session) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
@@ -105,17 +105,33 @@ var getMirrorPeerIds = function(req, res) {
 
 var getControllerPeerIds = function(req, res) {
     var gameSessionId = req.session.gameSessionId;
-    if (gameSessionId) {
+    if (!gameSessionId) {
         res.send(400, "The 'gameSessionId' parameter was null.");
         return;
     }
     // Get the session
     var session = sessionMap[gameSessionId];
-    if (session) {
+    if (!session) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
     res.json(200, session.getControllerPeerIds || []);
+};
+
+var renderController = function(req, res) {
+    var gameSessionId = req.param("gameSessionId");
+    if (!gameSessionId) {
+        res.send(400, "The 'gameSessionId' parameter was null.");
+        return;
+    }
+    // Get the session
+    var session = sessionMap[gameSessionId];
+    if (!session) {
+        res.send(500, "Could not get the session; it was non-existent.");
+        return;
+    }
+	// 
+    res.render("controller", {});
 };
 
 /******************************************* EXPORTS **********************************************/
@@ -137,4 +153,8 @@ module.exports.routes = [{
     path: "/game/controllers",
     method: "GET",
     handler: getControllerPeerIds
+}, {
+    path: "/game/controller/:gameSessionId",
+    method: "GET",
+    handler: renderController
 }];
