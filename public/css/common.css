@@ -1,0 +1,186 @@
+.navbar .nav>li>a.brand {
+    padding-left:20px;
+    margin-left:0
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#ddd;
+    -webkit-box-shadow:0 8px 6px 6px black;
+    -moz-box-shadow:0 8px 6px 6px black;
+    box-shadow:0 8px 6px 6px black
+}
+
+footer p {
+    padding:5px 0 12px 10px
+}
+
+/******************************************* BASELINING *******************************************/
+
+html, body {
+    background: #eee;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/OpenSans-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/OpenSans-Semibold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal
+}
+
+/************************************** NAVIGATION & SIDEBAR **************************************/
+
+div.sidebar {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    bottom: 0px;
+    width: 60px;
+
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+    background: #2c2c2d;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2) inset;
+    transition: width 0.25s ease;
+}
+div.sidebar:hover {
+    width: 200px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+div.sidebar div.sidebar-inner {
+    width: 100%;
+    height: auto;
+}
+div.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+
+    background: url(/img/bg-tile-red.png) repeat;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    color: #fff;
+}
+div.header ul {
+    margin: 0px;
+    list-style-type: none;
+}
+div.header .header-logo {
+    position: absolute;
+    left: 11px;
+    top: 0px;
+    bottom: 0px;
+}
+div.header .header-logo a {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+}
+div.header .header-logo a span#acm-logo {
+    display: inline-block;
+    margin-top: 5px;
+    width: 200px;
+    height: 40px;
+
+    background: url(/img/acm-logo.png) no-repeat;
+    background-position: 0px 0px;
+}
+div.header .header-logo a:hover span#acm-logo {
+    background-position: 0px -40px;
+}
+div.header .header-session-panel {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+
+    margin-top: 10px;
+}
+div.header .header-session-panel .header-session-button {
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-size: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 5px;
+    outline: 0;
+}
+#sidebar-icon-home {
+    background: url(/img/icons/sidebar/home-small.png) no-repeat;
+}
+div.sidebar #sidebar-icon-about {
+    background: url(/img/icons/sidebar/about-small.png) no-repeat;
+}
+div.sidebar #sidebar-icon-calendar {
+    background: url(/img/icons/sidebar/calendar-small.png) no-repeat;
+}
+div.sidebar #sidebar-icon-blog {
+    background: url(/img/icons/sidebar/blog-small.png) no-repeat;
+}
+div.sidebar #sidebar-icon-contact {
+    background: url(/img/icons/sidebar/contact-small.png) no-repeat;
+}
+div.sidebar .sidebar-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 4px;   
+}
+div.sidebar .sidebar-inner .sidebar-item {
+    display: inline-block;
+    width: 225px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: opacity 0.15s ease-in-out;
+}
+div.sidebar .sidebar-inner .sidebar-item:hover {
+    opacity: 0.5;
+}
+div.sidebar .sidebar-inner .sidebar-item.current,
+div.sidebar .sidebar-inner .sidebar-item.current:hover {
+    opacity: 1.0;
+}
+div.sidebar .sidebar-title {
+    float: left;
+    color: #ededed;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 120px;
+    text-shadow: 0px 0px #000;
+}
+
+/****************************************** CONTENT AREA ******************************************/
+
+section.content {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    right: 0px;
+    bottom: 0px;
+
+    background: #eee;
+}
+section.content section {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
