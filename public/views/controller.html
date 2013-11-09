@@ -1,16 +1,16 @@
 <div class='snes'>
   <div class='left'>
     <div class='pad'>
-      <div class='control top' ng-mouse-active="clickButton('up')">
+      <div class='control top' ng-mousedown="clickButton('up')" ng-mouseup="releaseButton('up')" >
         <div class='arrow'></div>
       </div>
-      <div class='control left' ng-mouse-activek="clickButton('left')">
+      <div class='control left' ng-mousedown="clickButton('left')" ng-mouseup="releaseButton('left')">
         <div class='arrow'></div>
       </div>
-      <div class='control right' ng-mouse-active="clickButton('right')">
+      <div class='control right' ng-mousedown="clickButton('right')" ng-mouseup="releaseButton('right')">
         <div class='arrow'></div>
       </div>
-      <div class='control bottom' ng-mouse-active="clickButton('down')">
+      <div class='control bottom' ng-mousedown ="clickButton('down')" ng-mouseup="releaseButton('down')">
         <div class='arrow'></div>
       </div>
       <div class='control middle'></div>
@@ -20,18 +20,18 @@
     <div class='logo'></div>
     <div class='logo clone'></div>
     <div class='title'></div>
-    <button class='select' ng-click="clickButton('select')"></button >
-    <button class='start' ng-click="clickButton('start')"></button >
+    <button class='select' ng-mousedown="clickButton('select')" ng-mouseup="releaseButton('select')"></button >
+    <button class='start' ng-mousedown="clickButton('start')" ng-mouseup="releaseButton('start')"></button >
   </div>
   <div class='right'>
     <div class='circle'>
       <div class='group-1'>
-        <button class='green' ng-click="clickButton('y')"></button>
-        <button class='blue' ng-click="clickButton('x')"></button>
+        <button class='green' ng-mousedown="clickButton('y')" ng-mouseup="releaseButton('y')"></button>
+        <button class='blue' ng-mousedown="clickButton('x')" ng-mouseup="releaseButton('x')"></button>
       </div>
       <div class='group-2'>
-        <button class='yellow' ng-click="clickButton('b')"></button>
-        <button class='red' ng-click="clickButton('a')"></button>
+        <button class='yellow' ng-mousedown="clickButton('b')" ng-mouseup="releaseButton('b')"></button>
+        <button class='red' ng-mousedown="clickButton('a')" ng-mouseup="releaseButton('a')"></button>
       </div>
     </div>
   </div>
