@@ -1,37 +1,37 @@
-<div class="snes">
-  <div class="left">
-    <div class="pad">
-      <div class="control top">
-        <div class="arrow"></div>
+<div class='snes'>
+  <div class='left'>
+    <div class='pad'>
+      <div class='control top' ng-mouse-active="clickButton('up')">
+        <div class='arrow'></div>
       </div>
-      <div class="control left">
-        <div class="arrow"></div>
+      <div class='control left' ng-mouse-activek="clickButton('left')">
+        <div class='arrow'></div>
       </div>
-      <div class="control right">
-        <div class="arrow"></div>
+      <div class='control right' ng-mouse-active="clickButton('right')">
+        <div class='arrow'></div>
       </div>
-      <div class="control bottom">
-        <div class="arrow"></div>
+      <div class='control bottom' ng-mouse-active="clickButton('down')">
+        <div class='arrow'></div>
       </div>
-      <div class="control middle"></div>
+      <div class='control middle'></div>
     </div>
   </div>
-  <div class="middle">
-    <div class="logo"></div>
-    <div class="logo clone"></div>
-    <div class="title"></div>
-    <button class="select"></button>
-    <button class="start"></button>
+  <div class='middle'>
+    <div class='logo'></div>
+    <div class='logo clone'></div>
+    <div class='title'></div>
+    <button class='select' ng-click="clickButton('select')"></button >
+    <button class='start' ng-click="clickButton('start')"></button >
   </div>
-  <div class="right">
-    <div class="circle">
-      <div class="group-1">
-        <button class="green"></button>
-        <button class="blue"></button>
+  <div class='right'>
+    <div class='circle'>
+      <div class='group-1'>
+        <button class='green' ng-click="clickButton('y')"></button>
+        <button class='blue' ng-click="clickButton('x')"></button>
       </div>
-      <div class="group-2">
-        <button class="yellow"></button>
-        <button class="red"></button>
+      <div class='group-2'>
+        <button class='yellow' ng-click="clickButton('b')"></button>
+        <button class='red' ng-click="clickButton('a')"></button>
       </div>
     </div>
   </div>
