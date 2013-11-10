@@ -46,6 +46,7 @@ var joinSession = function(req, res) {
     if (!gameSessionId) {
         // Make a new one since this guy doesn't have one
         gameSessionId = newGameSession(req.headers["user-agent"]);
+		req.session.gameSessionId = gameSessionId;
     }
     // Get the session
     var session = sessionMap[gameSessionId];
