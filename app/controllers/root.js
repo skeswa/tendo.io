@@ -9,7 +9,7 @@
 /******************************************** MODULE **********************************************/
 
 var render = function(req, res) {
-    res.render("index", {
+    res.render("app", {
         user: req.user ? JSON.stringify(req.user) : "null"
     });
 };
