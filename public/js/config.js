@@ -2,7 +2,7 @@
 window.app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-        when('/', {
+        when('/console', {
             templateUrl: 'views/console.html',
             controller: "ConsoleController"
         }).
@@ -10,7 +10,7 @@ window.app.config(['$routeProvider',
             templateUrl: 'views/login.html',
             controller: "loginController"
         }).
-        when('/setup', {
+        when('/', {
             templateUrl: 'views/setup.html',
             controller: "setupController"
         }).
