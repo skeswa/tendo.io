@@ -40,9 +40,18 @@ JSNES.Keyboard = function() {
         this.state2[i] = 0x40;
     }
 };
-
+var zeroArray = function (arr) {
+	for (var i = 0; i < 8; i++) {
+		arr[i] = 0x40; // up everything
+	}
+};
+var state1Keys = [88, 89, 90, 17, 13, 38, 40, 37, 39];
+var state2Keys = [103, 105, 99, 97, 104, 98, 40, 100, 102];
 JSNES.Keyboard.prototype = {
     setKey: function(key, value) {
+		if (state1Keys.indexOf(key) !== -1) zeroArray(state1Keys);
+		if (state2Keys.indexOf(key) !== -1) zeroArray(state2Keys);
+		
         switch (key) {
             case 88: this.state1[this.keys.KEY_A] = value; break;      // X
             case 89: this.state1[this.keys.KEY_B] = value; break;      // Y (Central European keyboard)
