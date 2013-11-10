@@ -10,6 +10,10 @@ window.app.config(['$routeProvider',
             templateUrl: 'views/login.html',
             controller: "loginController"
         }).
+        when('/setup', {
+            templateUrl: 'views/setup.html',
+            controller: "setupController"
+        }).
         otherwise({
             redirectTo: '/'
         });
