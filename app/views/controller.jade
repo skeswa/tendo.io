@@ -25,7 +25,9 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml', xmlns:fb='https://www.face
     link(rel='stylesheet', href='/css/common.css')
 
     link(rel='stylesheet', href='/css/views/controller.css')
-
+	// for variable embedding
+	script(type='text/javascript').
+	  var gameSessionId = #{gameSessionId};
     //if lt IE 9
     script(src='http://html5shim.googlecode.com/svn/trunk/html5.js'))
   body

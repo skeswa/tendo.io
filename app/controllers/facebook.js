@@ -38,7 +38,9 @@ var facebookCallback = function(req, res){
 			req.session.fbUser = querystring.parse(body);
 			console.log(req.session.fbUser);
 			console.log(req.session.gameSessionId);
-			res.render('controller', {});
+			res.render('controller', {
+				gameSessionId: req.session.gameSessionId
+			});
 		});
 	});
 }
