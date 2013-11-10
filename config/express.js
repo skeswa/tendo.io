@@ -70,6 +70,9 @@ module.exports = function(app, passport, db) {
         //use passport session
         app.use(passport.initialize());
         app.use(passport.session());
+		
+		//for file uploads
+		app.use(express.multipart());
 
         //routes should be at the last
         app.use(app.router);
