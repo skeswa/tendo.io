@@ -38,9 +38,7 @@ angular.module("mean.system").controller("ControllerController", ["$scope", "Glo
         console.log("PLAYER NUMBER OF THIS CONTROLLER IS: " + playerNumber);
         var consolePeerId = response.consolePeerId;
         console.log("CONSOLE PEER ID OF THIS GAME SESSION IS: " + consolePeerId);
-        connection = peer.connect(consolePeerId, {
-          label: "PLAYER " + playerNumber
-        });
+        connection = peer.connect(consolePeerId);
         connection.send("controller");
       },
       error: function(jqXHR, textStatus, errorThrown) {
