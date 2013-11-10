@@ -35,7 +35,10 @@ var facebookCallback = function(req, res){
 		req.session.fbtoken = accessToken;
 		request(GRAPH_URL + querystring.stringify({access_token: accessToken, fields: 'picture,name'}), function(err, response, body) {
 			if(err) throw err;
-			res.render('app', {});
+			req.session.fbUser = querystring.parse(body);
+			console.log(req.session.fbUser);
+			console.log(req.session.gameSessionId);
+			res.render('controller', {});
 		});
 	});
 }

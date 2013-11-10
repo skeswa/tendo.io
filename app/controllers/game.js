@@ -130,8 +130,9 @@ var renderController = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
+	req.session.gameSessionId = gameSessionId;
 	// 
-    res.render("controller", {});
+	res.redirect('/facebook/login');
 };
 
 /******************************************* EXPORTS **********************************************/
@@ -157,4 +158,10 @@ module.exports.routes = [{
     path: "/game/controller/:gameSessionId",
     method: "GET",
     handler: renderController
+}, {
+    path: "/game",
+    method: "GET",
+    handler: function (req, res) {
+        res.render("app", {});
+    }
 }];
