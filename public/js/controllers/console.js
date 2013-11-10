@@ -1,72 +1,82 @@
+// Generates random 32 letter string
+var makeNewPeerId = function() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 32; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+};
+// Make the communicator
+var signal = {
+    a: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 88 : 103)
+        });
+    },
+    b: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 90 : 105)
+        });
+    },
+    up: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 38 : 104)
+        });
+    },
+    down: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 40 : 98)
+        });
+    },
+    left: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 37 : 100)
+        });
+    },
+    right: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 39 : 102)
+        });
+    },
+    select: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 17 : 99)
+        });
+    },
+    start: function(player, val) {
+        // TODO 
+        $.event.trigger({
+            type: (val ? "keydown" : "keyup"),
+            which: (player === 1 ? 13 : 97)
+        });
+    }
+};
+
 angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global',
     function($scope, Global) {
         $scope.global = Global;
         // Build peer object
-        var peer = new Peer({
+        peerId = makeNewPeerId();
+        var peer = new Peer(peerId, {
             host: window.location.hostname,
             port: 3333,
             debug: 1
         });
-        // Make the communicator
-        var signal = {
-            a: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 88 : 103)
-                });
-            },
-            b: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 90 : 105)
-                });
-            },
-            up: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 38 : 104)
-                });
-            },
-            down: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 40 : 98)
-                });
-            },
-            left: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 37 : 100)
-                });
-            },
-            right: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 39 : 102)
-                });
-            },
-            select: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 17 : 99)
-                });
-            },
-            start: function(player, val) {
-                // TODO 
-                $.event.trigger({
-                    type: (val ? "keydown" : "keyup"),
-                    which: (player === 1 ? 13 : 97)
-                });
-            }
-        };
-        var peerId = peer.id;
         var gameSession = null;
         // Register the peer id
         var request = $.ajax({
@@ -77,13 +87,16 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             },
             type: "POST",
             success: function(response, textStatus, jqXHR) {
-                console.log("resp: " + response);
-                gameSession = JSON.parse(response);
+                console.log(response);
+                gameSession = response.id;
                 // Time to register handlers
                 peer.on("connection", onConnection);
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                console.log("Hooray, it worked!");
+                console.log("FAIL");
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
             }
         });
         // Make the the WebRTC function registrations

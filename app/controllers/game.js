@@ -157,4 +157,10 @@ module.exports.routes = [{
     path: "/game/controller/:gameSessionId",
     method: "GET",
     handler: renderController
+}, {
+    path: "/game",
+    method: "GET",
+    handler: function (req, res) {
+        res.render("app", {});
+    }
 }];
