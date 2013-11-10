@@ -8,65 +8,52 @@ var makeNewPeerId = function() {
     return text;
 };
 // Make the communicator
-var logSignal = function(msg) {
-    $("#activity-log").append("<span class='log-item'>" + msg +"</span>");
-}
+var doKeyDown = function(keyCode) {
+    nes.keyboard.keyDown({ keyCode: keyCode });
+};
+var doKeyUp = function(keyCode) {
+    nes.keyboard.keyUp({ keyCode: keyCode });
+};
 var signal = {
     a: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 88 : 103)
-        });
+        var kc = (player === 1) ? 88 : 103;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     b: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 90 : 105)
-        });
+        var kc = (player === 1) ? 90 : 105;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     up: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 38 : 104)
-        });
+        var kc = (player === 1) ? 38 : 104;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     down: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 40 : 98)
-        });
+        var kc = (player === 1) ? 40 : 98;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     left: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 37 : 100)
-        });
+        var kc = (player === 1) ? 37 : 100;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     right: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 39 : 102)
-        });
+        var kc = (player === 1) ? 39 : 102;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     select: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup")); 
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 17 : 99)
-        });
+        var kc = (player === 1) ? 17 : 99;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     },
     start: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
-        $.event.trigger({
-            type: (val ? "keydown" : "keyup"),
-            which: (player === 1 ? 13 : 97)
-        });
+        var kc = (player === 1) ? 13 : 97;
+        if (val === 0) doKeyUp(kc);
+        else doKeyDown(kc);
     }
 };
 
@@ -115,6 +102,8 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
                 var buttonId = data.buttonId;
                 var player = data.player;
                 var value = data.value;
+                // Print the input
+                console.log("Player #" + player + ": " + (value ? "keydown" : "keyup") + " on button '" + buttonId + "'.");
                 // Pipe to the emulator
                 switch (buttonId) {
                     case "a":
