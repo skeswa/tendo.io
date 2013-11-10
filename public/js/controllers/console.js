@@ -59,11 +59,8 @@ var signal = {
 
 angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global', '$http',
     function($scope, Global, $http) {
-
-        console.log(game_data);
-
         JSNES.UIDelegate.load("http://pooter.sandile.me:3000/roms/download/"+game_data);
-        
+        //
         $scope.global = Global;
         // Build peer object
         peerId = makeNewPeerId();
@@ -84,12 +81,6 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             },
             type: "POST",
             success: function(response, textStatus, jqXHR) {
-                console.log(response);
-                gameSession = response.id;
-
-                // get qr code
-                console.log("/qr/generate/"+gameSession);
-
                 $http({
                     url: "/qr/generate/"+gameSession,
                     method: "GET",
@@ -120,8 +111,6 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
                 console.log("connection opened with peer: " + connection.peer);
             });
             connection.on("data", function(data) {
-                console.log("data: ");
-                console.log(data);
                 var buttonId = data.buttonId;
                 var player = data.player;
                 var value = data.value;

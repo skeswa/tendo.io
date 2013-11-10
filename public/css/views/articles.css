@@ -1,7 +1,19 @@
-h1 {
-    text-align:center
+#statusPanel {
+    position: fixed;
+    left: 0px;
+    height: 120px;
+    width: 200px;
+    top: 250px;
+    margin-top: -100px;
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+    padding: 12px;
 }
-
-ul.articles li:not(:last-child) {
-    border-bottom:1px solid #ccc
+#statusPanel div {
+    padding-bottom: 10px;
+}
+#statusPanelTitle {
+    text-align: center;
+    width: 100%;
 }
