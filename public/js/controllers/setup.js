@@ -22,9 +22,9 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
                 return myXhr;
             },
             //Ajax events
-            beforeSend: beforeSendHandler,
-            success: completeHandler,
-            error: errorHandler,
+            beforeSend: function(){},
+            success: function(){},
+            error: function(){},
             // Form data
             data: formData,
             //Options to tell jQuery not to process data or worry about content-type.
