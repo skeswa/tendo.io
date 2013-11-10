@@ -2,4 +2,5 @@
 .nodemonignore
 .sass-cache/
 node_modules/
-util/logs/
+util/logs/debug.log
+util/logs/error.log
