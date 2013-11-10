@@ -83,6 +83,9 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             success: function(response, textStatus, jqXHR) 
 			{
 				gameSession = response;
+
+                $scope.gameSession = gameSession;
+
                 $http({
                     url: "/qr/generate/"+gameSession.id,
                     method: "GET",
