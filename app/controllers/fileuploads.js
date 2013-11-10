@@ -16,6 +16,7 @@ var logger = require("../../util/log"); // Our custom logging utility
 var uploadRom = function(req, res){
 	var fileName = req.files.file.originalFilename; 
 	fs.readFile(req.files.file.path, function (err, data) {
+		if(err) throw err;
 		var newPath = path.resolve(__dirname, "../../", "uploads");
 		console.log(newPath);
 		fs.writeFile(newPath, data, function (err) {
