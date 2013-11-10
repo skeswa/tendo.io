@@ -14,8 +14,8 @@ var logger = require("../../util/log"); // Our custom logging utility
 
 var uploadRom = function(req, res){
 	console.log(req.files);
-	var fileName = req.files.rom.name; 
-	fs.readFile(req.files.rom.path, function (err, data) {
+	var fileName = req.files.file.originalFilename; 
+	fs.readFile(req.files.file.path, function (err, data) {
 		var newPath = __dirname + "/uploads/" + fileName;
 		fs.writeFile(newPath, data, function (err) {
 			res.send(200, 'upload succeded');
