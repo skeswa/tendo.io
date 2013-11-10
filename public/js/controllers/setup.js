@@ -37,6 +37,7 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             beforeSend: function(){},
             success: function(data){
               game_data = data;
+              console.log(game_data);
               $location.path('/console');
             },
             error: function(){},
