@@ -8,58 +8,61 @@ var makeNewPeerId = function() {
     return text;
 };
 // Make the communicator
+var logSignal = function(msg) {
+    $("#activity-log").append("<span class='log-item'>" + msg +"</span>");
+}
 var signal = {
     a: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 88 : 103)
         });
     },
     b: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 90 : 105)
         });
     },
     up: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 38 : 104)
         });
     },
     down: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 40 : 98)
         });
     },
     left: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 37 : 100)
         });
     },
     right: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 39 : 102)
         });
     },
     select: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup")); 
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 17 : 99)
         });
     },
     start: function(player, val) {
-        // TODO 
+        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 13 : 97)
@@ -109,22 +112,26 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             connection.on("data", function(data) {
                 console.log("data: ");
                 console.log(data);
-                if (!peerType) {
-                    // They're announcing peer type
-                    peerType = data;
-                    return;
-                }
-                if (peerType === "controller") {
-                    // Its a controller
-                    data = JSON.parse(data);
-                    if (data.a === 0 || data.a === 1) signal.a(data.player, data.a);
-                    if (data.b === 0 || data.b === 1) signal.b(data.player, data.b);
-                    if (data.up === 0 || data.up === 1) signal.up(data.player, data.up);
-                    if (data.down === 0 || data.down === 1) signal.down(data.player, data.down);
-                    if (data.left === 0 || data.left === 1) signal.left(data.player, data.left);
-                    if (data.right === 0 || data.right === 1) signal.right(data.player, data.right);
-                    if (data.start === 0 || data.start === 1) signal.start(data.player, data.start);
-                    if (data.select === 0 || data.select === 1) signal.select(data.player, data.select);
+                var buttonId = data.buttonId;
+                var player = data.player;
+                var value = data.value;
+                // Pipe to the emulator
+                switch (buttonId) {
+                    case "a":
+                    case "b":
+                    case "x":
+                    case "y":
+                    case "up":
+                    case "down":
+                    case "left":
+                    case "right":
+                    case "select":
+                    case "start":
+                        if (signal[buttonId]) signal[buttonId](player, value);
+                        break;
+                    default:
+                        console.log("UNSUPPORTED BUTTON_ID RECEIVED: " + buttonId);
+                        break;
                 }
             });
             connection.on("close", function() {
