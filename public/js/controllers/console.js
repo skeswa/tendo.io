@@ -9,7 +9,7 @@ var makeNewPeerId = function() {
 };
 // Make the communicator
 var doKeyDown = function(keyCode) {
-    nes.keyboard.keyDown({ keyCode: keyCodeObj });
+    nes.keyboard.keyDown({ keyCode: keyCode });
 };
 var doKeyUp = function(keyCode) {
     nes.keyboard.keyUp({ keyCode: keyCode });
