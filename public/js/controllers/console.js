@@ -60,6 +60,8 @@ var signal = {
 angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global', '$http',
     function($scope, Global, $http) {
 
+        console.log(game_data);
+
         JSNES.UIDelegate.load("http://pooter.sandile:3000/roms/download/"+game_data);
         
         $scope.global = Global;
