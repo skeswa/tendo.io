@@ -1,0 +1,84 @@
+body { 
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+#bg {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+#overlay {
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+    bottom: 0px;
+    position: absolute;
+}
+#aRegion {
+    width: 20%;
+    height: 90%;
+    display: block;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+#bRegion {
+    width: 15%;
+    height: 90%;
+    display: block;
+    position: absolute;
+    right: 25%;
+    bottom: 10%;
+}
+#startRegion {
+    width: 11%;
+    height: 60%;
+    display: block;
+    position: absolute;
+    right: 40%;
+    bottom: 20%;
+}
+#selectRegion {
+    width: 11%;
+    height: 60%;
+    display: block;
+    position: absolute;
+    right: 51%;
+    bottom: 20%;
+}
+#rightRegion {
+    width: 11%;
+    height: 70%;
+    display: block;
+    position: absolute;
+    right: 63%;
+    bottom: 12%;
+}
+#topRegion {
+    width: 10%;
+    height: 40%;
+    display: block;
+    position: absolute;
+    right: 73%;
+    top: 0%;
+}
+#bottomRegion {
+    width: 10%;
+    height: 40%;
+    display: block;
+    position: absolute;
+    right: 73%;
+    bottom: 10%;
+}
+#leftRegion {
+    width: 14%;
+    height: 70%;
+    display: block;
+    position: absolute;
+    right: 80%;
+    bottom: 20%;
+}
