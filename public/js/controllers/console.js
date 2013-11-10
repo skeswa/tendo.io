@@ -62,7 +62,7 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
 
         console.log(game_data);
 
-        JSNES.UIDelegate.load("http://pooter.sandile:3000/roms/download/"+game_data);
+        JSNES.UIDelegate.load("http://pooter.sandile.me:3000/roms/download/"+game_data);
         
         $scope.global = Global;
         // Build peer object
