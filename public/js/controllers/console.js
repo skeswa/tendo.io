@@ -13,56 +13,48 @@ var logSignal = function(msg) {
 }
 var signal = {
     a: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 88 : 103)
         });
     },
     b: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 90 : 105)
         });
     },
     up: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 38 : 104)
         });
     },
     down: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 40 : 98)
         });
     },
     left: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 37 : 100)
         });
     },
     right: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 39 : 102)
         });
     },
     select: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup")); 
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 17 : 99)
         });
     },
     start: function(player, val) {
-        logSignal("Player " + player + ": A " + (val ? "keydown" : "keyup"));
         $.event.trigger({
             type: (val ? "keydown" : "keyup"),
             which: (player === 1 ? 13 : 97)
@@ -115,6 +107,8 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
                 var buttonId = data.buttonId;
                 var player = data.player;
                 var value = data.value;
+                // Print the input
+                console.log("Player #" + player + ": " + (value ? "keydown" : "keyup") + " on button '" + buttonId + "'.");
                 // Pipe to the emulator
                 switch (buttonId) {
                     case "a":
