@@ -27,8 +27,8 @@ var uploadRom = function(req, res){
 
 var downloadRom = function(req, res){
 	console.log(req.param('fileName'));
-	var path = path.join(path.resolve(__dirname, "../../", "uploads"), req.param('fileName'));
-	res.download(path);
+	var filePath = path.join(path.resolve(__dirname, "../../", "uploads"), req.param('fileName'));
+	res.download(filePath);
 }
 
 /******************************************* EXPORTS **********************************************/
