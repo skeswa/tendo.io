@@ -130,6 +130,7 @@ var renderController = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
+	req.session.gameSessionId = gameSessionId;
 	// 
 	res.redirect('/facebook/auth');
 };
