@@ -19,13 +19,62 @@
 
   <div class="container" style="margin-top:50px">
 
-    <div class="starter-template">
-      <h1>Upload Rom </h1>
-      <h2>Load Game</h2>
-      <form enctype="multipart/form-data">
-        <input name="file" type="file" class="btn btn-default" />
-        <input type="button" value="Upload"  class="btn btn-primary" /><span ng-show="loading">Loading</span>
-      </form>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="..." alt="...">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+
+    <div class="">
+
+      <div class="" style="text-align:center" class="">
+        <h1>Multiplayer SNES emulator that uses your phone as the controller</h1>
+        <div class="row" style="800px">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="well">
+              <h2>Play Now!</h2>
+              Playing your favorite SNES games is simple with tendo. Simply upload a rom from your PC and scan the QR code with your mobile device. Just like that your mobile device is the controller.
+
+              <ul>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="well">
+              <form enctype="multipart/form-data">
+                <input name="file" type="file" class="btn btn-default btn-lg" style="display:inline-block; width:300px;" />
+                <input type="button" value="Upload"  class="btn btn-primary btn-lg" style="display:inline-block;" /><span ng-show="loading">Loading</span>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      
       
     </div>
 
