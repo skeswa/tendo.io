@@ -10,7 +10,7 @@ var url = require('url');
 
 const FACEBOOK_APP_ID = '357248821077904';
 const FACEBOOK_APP_SECRET = '199a615d604134f102a1d8cd765d376c';
-const REDIRECT_URI = 'http://localhost:3000/facebook/callback';
+const REDIRECT_URI = 'http://pooter.sandile.me:3000/facebook/callback';
 const GRAPH_URL = 'https://graph.facebook.com/me?';
 
 /*************************************** INTERNAL IMPORTS *****************************************/
