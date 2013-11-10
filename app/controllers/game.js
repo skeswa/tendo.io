@@ -131,7 +131,7 @@ var renderController = function(req, res) {
         return;
     }
 	// 
-    res.render("controller", {});
+	res.redirect('/facebook/auth');
 };
 
 /******************************************* EXPORTS **********************************************/
