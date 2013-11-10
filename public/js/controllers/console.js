@@ -83,7 +83,8 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             url: "/game/join",
             data: {
                 clientType: "console",
-                peerId: peerId
+                peerId: peerId,
+                forceNew: true
             },
             type: "POST",
             success: function(response, textStatus, jqXHR) {
@@ -106,7 +107,8 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
                 console.log("connection opened with peer: " + connection.peer);
             });
             connection.on("data", function(data) {
-                console.log("data: " + data);
+                console.log("data: ");
+                console.log(data);
                 if (!peerType) {
                     // They're announcing peer type
                     peerType = data;
