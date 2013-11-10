@@ -42,11 +42,14 @@ var joinSession = function(req, res) {
         return;
     }
     // Read the session
-    var gameSessionId = req.session.gameSessionId;
+    console.log("The session had: " + req.session.gameSessionId);
+    console.log("Forcing new: " + req.param("forceNew") || "false");
+    var gameSessionId;
+    if (!req.param("forceNew")) gameSessionId = req.session.gameSessionId;
     if (!gameSessionId) {
         // Make a new one since this guy doesn't have one
         gameSessionId = newGameSession(req.headers["user-agent"]);
-		req.session.gameSessionId = gameSessionId;
+        req.session.gameSessionId = gameSessionId;
     }
     // Get the session
     var session = sessionMap[gameSessionId];
@@ -131,9 +134,9 @@ var renderController = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
-	req.session.gameSessionId = gameSessionId;
-	// 
-	res.redirect('/facebook/login');
+    req.session.gameSessionId = gameSessionId;
+    // 
+    res.redirect('/facebook/login');
 };
 
 /******************************************* EXPORTS **********************************************/
@@ -162,7 +165,7 @@ module.exports.routes = [{
 }, {
     path: "/game",
     method: "GET",
-    handler: function (req, res) {
+    handler: function(req, res) {
         res.render("app", {});
     }
 }];
