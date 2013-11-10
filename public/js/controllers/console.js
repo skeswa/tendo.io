@@ -17,41 +17,49 @@ var doKeyUp = function(keyCode) {
 var signal = {
     a: function(player, val) {
         var kc = (player === 1) ? 88 : 103;
+		console.log("a " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     b: function(player, val) {
         var kc = (player === 1) ? 90 : 105;
+		console.log("b " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     up: function(player, val) {
         var kc = (player === 1) ? 38 : 104;
+		console.log("u " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     down: function(player, val) {
         var kc = (player === 1) ? 40 : 98;
+		console.log("d " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     left: function(player, val) {
         var kc = (player === 1) ? 37 : 100;
+		console.log("l " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     right: function(player, val) {
         var kc = (player === 1) ? 39 : 102;
+		console.log("r " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     select: function(player, val) {
         var kc = (player === 1) ? 17 : 99;
+		console.log("se " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
     start: function(player, val) {
         var kc = (player === 1) ? 13 : 97;
+		console.log("st " + ((val === 0) ? "up" : "down"));
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     }
