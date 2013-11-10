@@ -59,6 +59,9 @@ var signal = {
 
 angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global', '$http',
     function($scope, Global, $http) {
+
+        JNES.UIDelegate.load("http://pooter.sandile:3000/roms/download/"+game_data);
+        
         $scope.global = Global;
         // Build peer object
         peerId = makeNewPeerId();

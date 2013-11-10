@@ -1,5 +1,5 @@
-angular.module("mean.system").controller("setupController", ["$scope", "Global",
-  function($scope, Global) {
+angular.module("mean.system").controller("setupController", ["$scope", "Global", "$location",
+  function($scope, Global, $location) {
 
     /*
     if($(this).width() > $(this).height()) { 
@@ -35,7 +35,10 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             },
             //Ajax events
             beforeSend: function(){},
-            success: function(){},
+            success: function(data){
+              game_data = data;
+              $location.path('/console');
+            },
             error: function(){},
             // Form data
             data: formData,
