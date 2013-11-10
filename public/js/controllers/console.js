@@ -57,8 +57,13 @@ var signal = {
     }
 };
 
-angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global',
-    function($scope, Global) {
+angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global', '$http',
+    function($scope, Global, $http) {
+
+        console.log(game_data);
+
+        JSNES.UIDelegate.load("http://pooter.sandile.me:3000/roms/download/"+game_data);
+        
         $scope.global = Global;
         // Build peer object
         peerId = makeNewPeerId();
@@ -68,6 +73,7 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             debug: 1
         });
         var gameSession = null;
+
         // Register the peer id
         var request = $.ajax({
             url: "/game/join",
@@ -80,6 +86,23 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
             success: function(response, textStatus, jqXHR) {
                 console.log(response);
                 gameSession = response.id;
+
+                // get qr code
+                console.log("/qr/generate/"+gameSession);
+
+                $http({
+                    url: "/qr/generate/"+gameSession,
+                    method: "GET",
+                })
+                .success(function(data, status) {
+                    $('#QR').html(data);
+                })
+                .error(function(data, status) {
+                  alert("failed");
+                  console.log(data);
+                  console.log(status);
+                });
+
                 // Time to register handlers
                 peer.on("connection", onConnection);
             },

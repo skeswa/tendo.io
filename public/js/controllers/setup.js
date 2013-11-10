@@ -1,5 +1,15 @@
-angular.module("mean.system").controller("setupController", ["$scope", "Global",
-  function($scope, Global) {
+angular.module("mean.system").controller("setupController", ["$scope", "Global", "$location",
+  function($scope, Global, $location) {
+
+    /*
+    if($(this).width() > $(this).height()) { 
+     $(this).css('width',MaxPreviewDimension+'px');
+     $(this).css('height','auto');
+    } else {
+     $(this).css('height',MaxPreviewDimension+'px');
+     $(this).css('width','auto');
+    }*/
+
     var loading = false;
 
     $(':file').change(function(){
@@ -11,7 +21,7 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
     });
 
     $(':button').click(function(){
-        loading = true;
+        //loading = true;
         var formData = new FormData($('form')[0]);
         $.ajax({
             url: '/roms/upload',  //Server script to process data
@@ -25,7 +35,11 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             },
             //Ajax events
             beforeSend: function(){},
-            success: function(){loading = false;},
+            success: function(data){
+              game_data = data;
+              console.log(game_data);
+              $scope.$apply(function(){$location.path('/console');});
+            },
             error: function(){},
             // Form data
             data: formData,
