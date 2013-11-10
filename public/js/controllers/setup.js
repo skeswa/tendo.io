@@ -1,5 +1,5 @@
-angular.module("mean.system").controller("setupController", ["$scope", "Global", "TendoService",
-  function($scope, Global, TendoService) {
+angular.module("mean.system").controller("setupController", ["$scope", "Global",
+  function($scope, Global) {
 
     $(':file').change(function(){
         var file = this.files[0];
