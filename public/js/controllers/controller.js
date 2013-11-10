@@ -1,12 +1,18 @@
+var makeNewPeerId = function() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 32; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  return text;
+};
+
 angular.module("mean.system").factory('TendoService', function($rootScope, $http, $location) {
   var sharedService = {};
 
   // Create a new Peer with our demo API key, with debug set to true so we can
   // see what's going on.
-  sharedService.peer1 = new Peer({
-    key: 'lwjd5qra8257b9',
-    debug: 3
-  });
+  sharedService.peer1 = new Peer();
   // Create another Peer with our demo API key to connect to.
   sharedService.peer2 = new Peer({
     key: 'lwjd5qra8257b9',
@@ -48,9 +54,35 @@ angular.module("mean.system").factory('TendoService', function($rootScope, $http
 });
 angular.module("mean.system").controller("ControllerController", ["$scope", "Global", "TendoService",
   function($scope, Global, TendoService) {
-    peer = new Peer({
-      key: 'lwjd5qra8257b9',
-      debug: 3
+    var peerId = peerId;
+    var peer = new Peer(peerId, {
+      host: window.location.hostname,
+      port: 3333,
+      debug: 1
+    });
+    // Do registration
+    $.ajax({
+      url: "/game/join",
+      data: {
+        clientType: "controller",
+        peerId: peerId,
+        gameSessionId: gameSessionId
+      },
+      type: "POST",
+      success: function(response, textStatus, jqXHR) {
+        console.log(response);
+        var playerNumber = response.controllerIndex;
+        console.log("PLAYER NUMBER OF THIS CONTROLLER IS: " + playerNumber);
+        var consolePeerId = response.consolePeerId;
+        console.log("CONSOLE PEER ID OF THIS GAME SESSION IS: " + consolePeerId);
+        gameSession = response.id;
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.log("FAIL");
+        console.log(jqXHR);
+        console.log(textStatus);
+        console.log(errorThrown);
+      }
     });
 
     var recenterController = function() {
@@ -76,14 +108,14 @@ angular.module("mean.system").controller("ControllerController", ["$scope", "Glo
     });
 
     $scope.clickButton = function(button) {
-      send_to_console(button,1);
+      send_to_console(button, 1);
     }
 
     $scope.releaseButton = function(button) {
-      send_to_console(button,0);
+      send_to_console(button, 0);
     }
 
-    var send_to_console = function(button,state){
+    var send_to_console = function(button, state) {
       var data = [];
       data[button] = state;
       console.log(data);

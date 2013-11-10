@@ -42,10 +42,8 @@ var joinSession = function(req, res) {
         return;
     }
     // Read the session
-    console.log("The session had: " + req.session.gameSessionId);
-    console.log("Forcing new: " + req.param("forceNew") || "false");
     var gameSessionId;
-    if (!req.param("forceNew")) gameSessionId = req.session.gameSessionId;
+    if (!req.param("forceNew")) gameSessionId = req.param("gameSessionId") || req.session.gameSessionId;
     if (!gameSessionId) {
         // Make a new one since this guy doesn't have one
         gameSessionId = newGameSession(req.headers["user-agent"]);
@@ -72,9 +70,43 @@ var joinSession = function(req, res) {
             controllers = session.controllerPeerIds = [];
         }
         if (controllers.indexOf(peerId) == -1) controllers.push(peerId);
+        session.controllerIndex = controllers.indexOf(peerId);
     }
     // Call mom - tell her we're ok
     res.json(200, session);
+};
+
+var getControllerIndex = function(req, res) {
+    var gameSessionId = req.session.gameSessionId;
+    if (!gameSessionId) {
+        res.send(400, "The 'gameSessionId' parameter was null.");
+        return;
+    }
+    var peerId = req.param("peerId");
+    if (!peerId) {
+        res.send(400, "The 'peerId' parameter was null.");
+        return;
+    }
+    // Get the session
+    var session = sessionMap[gameSessionId];
+    if (!session) {
+        res.send(500, "Could not get the session; it was non-existent.");
+        return;
+    }
+    // Get the controllers
+    var controllerPeerIds = session.controllerPeerIds;
+    if (!controllerPeerIds) {
+        res.send(500, "Could not get the controllers in session; because there are none.");
+        return;
+    }
+    // Get them controllers, do a match
+    for (var i = 0; i < controllerPeerIds.length; i++) {
+        if (controllerPeerIds[i] === peerId) {
+            res.send(200, (i + 1));
+            return;
+        }
+    }
+    res.send(200, -1);
 };
 
 var getConsolePeerId = function(req, res) {
@@ -119,7 +151,7 @@ var getControllerPeerIds = function(req, res) {
         res.send(500, "Could not get the session; it was non-existent.");
         return;
     }
-    res.json(200, session.getControllerPeerIds || []);
+    res.json(200, session.controllerPeerIds || []);
 };
 
 var renderController = function(req, res) {
@@ -162,6 +194,10 @@ module.exports.routes = [{
     path: "/game/controller/:gameSessionId",
     method: "GET",
     handler: renderController
+}, {
+    path: "/game/controllerIndex",
+    method: "GET",
+    handler: getControllerIndex
 }, {
     path: "/game",
     method: "GET",
