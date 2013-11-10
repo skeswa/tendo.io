@@ -17,7 +17,7 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             xhr: function() {  // Custom XMLHttpRequest
                 var myXhr = $.ajaxSettings.xhr();
                 if(myXhr.upload){ // Check if upload property exists
-                    myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
+                    //myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
                 }
                 return myXhr;
             },
@@ -33,11 +33,5 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             processData: false
         });
     });
-
-    function progressHandlingFunction(e){
-        if(e.lengthComputable){
-            $('progress').attr({value:e.loaded,max:e.total});
-        }
-    }
   }
 ]);
