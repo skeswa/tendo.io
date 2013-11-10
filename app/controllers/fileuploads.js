@@ -26,6 +26,7 @@ var uploadRom = function(req, res){
 }
 
 var downloadRom = function(req, res){
+	console.log(req.param('fileName'));
 	var path = path.join(path.resolve(__dirname, "../../", "uploads"), req.param('fileName'));
 	res.download(path);
 }
@@ -40,7 +41,7 @@ module.exports.routes = [
     handler: uploadRom
 },
 {
-    path: "/roms/download",
+    path: "/roms/download/:fileName",
     method: "GET",
     handler: downloadRom
 }];
