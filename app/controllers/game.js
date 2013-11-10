@@ -132,7 +132,7 @@ var renderController = function(req, res) {
     }
 	req.session.gameSessionId = gameSessionId;
 	// 
-	res.redirect('/facebook/auth');
+	res.redirect('/facebook/login');
 };
 
 /******************************************* EXPORTS **********************************************/
