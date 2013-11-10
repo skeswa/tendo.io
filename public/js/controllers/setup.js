@@ -1,5 +1,6 @@
 angular.module("mean.system").controller("setupController", ["$scope", "Global",
   function($scope, Global) {
+    var loading = false;
 
     $(':file').change(function(){
         var file = this.files[0];
@@ -10,6 +11,7 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
     });
 
     $(':button').click(function(){
+        loading = true;
         var formData = new FormData($('form')[0]);
         $.ajax({
             url: '/roms/upload',  //Server script to process data
@@ -23,7 +25,7 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             },
             //Ajax events
             beforeSend: function(){},
-            success: function(){},
+            success: function(){loading = false;},
             error: function(){},
             // Form data
             data: formData,
