@@ -14,7 +14,7 @@ var logger = require("../../util/log"); // Our custom logging utility
 /******************************************** MODULE **********************************************/
 
 var uploadRom = function(req, res){
-	var fileName = req.files.file.originalFilename; 
+	var fileName = req.files.file.originalFilename.replace(/\s+/g, '');; 
 	fs.readFile(req.files.file.path, function (err, data) {
 		if(err) throw err;
 		var newPath = path.join(path.resolve(__dirname, "../../", "uploads"), fileName);
