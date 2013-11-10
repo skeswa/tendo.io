@@ -72,6 +72,7 @@ var joinSession = function(req, res) {
         if (controllers.indexOf(peerId) == -1) controllers.push(peerId);
         session.controllerIndex = controllers.indexOf(peerId);
     }
+	console.log(session);
     // Call mom - tell her we're ok
     res.json(200, session);
 };
