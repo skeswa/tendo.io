@@ -22,11 +22,11 @@
     <div class="starter-template">
       <h1>Upload Rom </h1>
       <h2>Load Game</h2>
-      <form action="/roms/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Filename:</label>
-        <input type="file" name="file" id="file" class="btn btn-default"><br>
-        <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+      <form enctype="multipart/form-data">
+        <input name="file" type="file" />
+        <input type="button" value="Upload" />
       </form>
+      <progress></progress>
       
     </div>
 
