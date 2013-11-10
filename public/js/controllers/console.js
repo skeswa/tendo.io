@@ -46,7 +46,7 @@ var signal = {
         else doKeyDown(kc);
     },
     select: function(player, val) {
-        var kc = (player === 1) ? 88 : 103;
+        var kc = (player === 1) ? 17 : 99;
         if (val === 0) doKeyUp(kc);
         else doKeyDown(kc);
     },
