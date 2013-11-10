@@ -20,9 +20,14 @@ var uploadRom = function(req, res){
 		var newPath = path.join(path.resolve(__dirname, "../../", "uploads"), fileName);
 		console.log(newPath);
 		fs.writeFile(newPath, data, function (err) {
-			res.send(200, 'upload succeded');
+			res.send(200, fileName);
 		});
 	});
+}
+
+var downloadRom = function(req, res){
+	var path = path.join(path.resolve(__dirname, "../../", "uploads"), req.param('fileName'));
+	res.download(path);
 }
 
 /******************************************* EXPORTS **********************************************/
@@ -33,4 +38,9 @@ module.exports.routes = [
     path: "/roms/upload",
     method: "POST",
     handler: uploadRom
+},
+{
+    path: "/roms/download",
+    method: "GET",
+    handler: downloadRom
 }];
