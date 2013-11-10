@@ -13,6 +13,7 @@ var logger = require("../../util/log"); // Our custom logging utility
 /******************************************** MODULE **********************************************/
 
 var uploadRom = function(req, res){
+	console.log(req.files);
 	var fileName = req.files.rom.name; 
 	fs.readFile(req.files.rom.path, function (err, data) {
 		var newPath = __dirname + "/uploads/" + fileName;
