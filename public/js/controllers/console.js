@@ -80,9 +80,11 @@ angular.module('mean.system').controller('ConsoleController', ['$scope', 'Global
                 forceNew: true
             },
             type: "POST",
-            success: function(response, textStatus, jqXHR) {
+            success: function(response, textStatus, jqXHR) 
+			{
+				gameSession = response;
                 $http({
-                    url: "/qr/generate/"+gameSession,
+                    url: "/qr/generate/"+gameSession.id,
                     method: "GET",
                 })
                 .success(function(data, status) {
