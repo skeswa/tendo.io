@@ -14,15 +14,21 @@ var logger = require("../../util/log"); // Our custom logging utility
 /******************************************** MODULE **********************************************/
 
 var uploadRom = function(req, res){
-	var fileName = req.files.file.originalFilename; 
+	var fileName = req.files.file.originalFilename.replace(/\s+/g, '');; 
 	fs.readFile(req.files.file.path, function (err, data) {
 		if(err) throw err;
 		var newPath = path.join(path.resolve(__dirname, "../../", "uploads"), fileName);
 		console.log(newPath);
 		fs.writeFile(newPath, data, function (err) {
-			res.send(200, 'upload succeded');
+			res.send(200, fileName);
 		});
 	});
+}
+
+var downloadRom = function(req, res){
+	console.log(req.param('fileName'));
+	var filePath = path.join(path.resolve(__dirname, "../../", "uploads"), req.param('fileName'));
+	res.download(filePath);
 }
 
 /******************************************* EXPORTS **********************************************/
@@ -33,4 +39,9 @@ module.exports.routes = [
     path: "/roms/upload",
     method: "POST",
     handler: uploadRom
+},
+{
+    path: "/roms/download/:fileName",
+    method: "GET",
+    handler: downloadRom
 }];
