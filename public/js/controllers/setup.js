@@ -39,6 +39,5 @@ angular.module("mean.system").controller("setupController", ["$scope", "Global",
             $('progress').attr({value:e.loaded,max:e.total});
         }
     }
-
   }
 ]);
