@@ -5,6 +5,7 @@
 /*************************************** EXTERNAL IMPORTS *****************************************/
 
 var fs = require('fs');
+var path = require('path');
 
 /*************************************** INTERNAL IMPORTS *****************************************/
 
@@ -13,10 +14,10 @@ var logger = require("../../util/log"); // Our custom logging utility
 /******************************************** MODULE **********************************************/
 
 var uploadRom = function(req, res){
-	console.log(req.files);
 	var fileName = req.files.file.originalFilename; 
 	fs.readFile(req.files.file.path, function (err, data) {
-		var newPath = __dirname + "/uploads/" + fileName;
+		var newPath = path.resolve(__dirname, "../../", "uploads");
+		console.log(newPath);
 		fs.writeFile(newPath, data, function (err) {
 			res.send(200, 'upload succeded');
 		});
