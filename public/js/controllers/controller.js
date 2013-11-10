@@ -76,8 +76,18 @@ angular.module("mean.system").controller("ControllerController", ["$scope", "Glo
     });
 
     $scope.clickButton = function(button) {
-      console.log(button);
+      send_to_console(button,1);
     }
-    console.log("test3");
+
+    $scope.releaseButton = function(button) {
+      send_to_console(button,0);
+    }
+
+    var send_to_console = function(button,state){
+      var data = [];
+      data[button] = state;
+      console.log(data);
+    }
+
   }
 ]);
