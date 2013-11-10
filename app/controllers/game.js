@@ -17,8 +17,8 @@ var logger = require("../../util/log"); // Our custom logging utility
 var sessionMap = {};
 
 var newGameSession = function(userAgent) {
-    var key = md5(userAgent + "/" + (new Date()).getTime() + "/" + Math.random());
-    while (sessionMap[key]) key = md5(key);
+    var key = md5(userAgent + "/" + (new Date()).getTime() + "/" + Math.random()).substring(0,8);
+    while (sessionMap[key]) key = md5(key)
     sessionMap[key] = {
         id: key
     };

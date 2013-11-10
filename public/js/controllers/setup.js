@@ -1,5 +1,15 @@
 angular.module("mean.system").controller("setupController", ["$scope", "Global",
   function($scope, Global) {
+
+    /*
+    if($(this).width() > $(this).height()) { 
+     $(this).css('width',MaxPreviewDimension+'px');
+     $(this).css('height','auto');
+    } else {
+     $(this).css('height',MaxPreviewDimension+'px');
+     $(this).css('width','auto');
+    }*/
+
     var loading = false;
 
     $(':file').change(function(){
