@@ -63,7 +63,7 @@ angular.module("mean.system").controller("ControllerController", ["$scope", "Glo
         buttonId: buttonId,
         value: value
       };
-      console.log("Sending this: " + JSON.stringify(payload));
+      console.log(payload);
       if (connection) {
         connection.send(payload);
       } else {
